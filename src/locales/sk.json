@@ -1,5 +1,27 @@
 {
+  "app": {
+    "home": "Vitajte!"
+  },
   "actions": {
-    "add": "Nová úloha"
+    "open": "Detail",
+    "new": "Nová úloha",
+    "search": "Vyhľadávanie (názov)",
+    "status": "Stav",
+    "add": "Pridaj"
+  },
+  "todo_list": {
+    "new": "Nový list",
+    "new_task": "Nová úloha",
+    "all_tasks": "Detail úlohy",
+    "to_be_done": "Nové",
+    "done": "Ukončené",
+    "title": "Názov úlohy",
+    "list": "Názov zoznamu",
+    "description": "Popis",
+    "deadline": "Dokedy"
+  },
+  "validation": {
+    "required": "Pole je povinné",
+    "date": "Dátum má nesprávny tvar"
   }
 }

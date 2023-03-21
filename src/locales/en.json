@@ -1,5 +1,27 @@
 {
-  "hello": {
-    "world": "hi"
+  "app": {
+    "home": "Welcome!"
+  },
+  "actions": {
+    "open": "Detail",
+    "new": "New Task",
+    "search": "Search (title)",
+    "status": "Status",
+    "add": "Add"
+  },
+  "todo_list": {
+    "new": "New list",
+    "new_task": "New Task",
+    "all_tasks": "Task Detail",
+    "to_be_done": "New",
+    "done": "Done",
+    "title": "Title",
+    "list": "Title",
+    "description": "Description",
+    "deadline": "Deadline"
+  },
+  "validation": {
+    "required": "Required",
+    "date": "Invalid date"
   }
 }

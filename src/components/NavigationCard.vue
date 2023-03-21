@@ -21,7 +21,6 @@
 
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer" />
-      <v-toolbar-title>{{ title }}</v-toolbar-title>
       <v-spacer />
       <v-toolbar-items>
         <v-btn
@@ -38,14 +37,11 @@
 
 <script>
 
-//import i18n from "../plugins/i18n.js";
-
 export default {
 	name: "NavigationCard",
 	data: () => ({
 		drawer: false,
 		locale: "sk",
-		//title: process.env.VUE_APP_TITLE,
 		items: [
 			{
 				title: "Home",
@@ -53,16 +49,9 @@ export default {
 				path: "/",
 			},
 			{
-				//title: i18n.t("addressBook.individuals"),
-        title: "Home",
+        title: "Todo List",
 				icon: "mdi-account",
-				path: "/address-book-individuals",
-			},
-			{
-				//title: i18n.t("addressBook.legal_persons"),
-        title: "Home",
-				icon: "mdi-book-account-outline",
-				path: "/address-book-legal-persons",
+				path: "/todo",
 			},
 		],
 	}),
@@ -98,18 +87,3 @@ export default {
 };
 </script>
 
-<!--<style lang="scss" scoped>-->
-<!--//@import "../scss/_variables.scss";-->
-
-<!--.navigation {-->
-<!--  padding-bottom: 1rem;-->
-
-<!--  ::v-deep .v-list-item__title {-->
-<!--    font-weight: bold;-->
-<!--    text-decoration: none;-->
-<!--    &:hover {-->
-<!--     // color: $dokumenta-orange;-->
-<!--    }-->
-<!--  }-->
-<!--}-->
-<!--</style>-->

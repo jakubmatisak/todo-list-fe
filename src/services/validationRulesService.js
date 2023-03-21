@@ -1,5 +1,5 @@
-import i18n from "@/i18n";
-/* eslint require-jsdoc-except/require-jsdoc: "off" */
+import i18n from "../plugins/i18n";
+
 export default {
   rules: {
     required: (value) => !!value || i18n.t("validations.rules.required"),

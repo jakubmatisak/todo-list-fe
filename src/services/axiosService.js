@@ -54,7 +54,7 @@ export async function getChecklist(url, name, options = {}) {
  * Call specific GET API. If success handle status code
  * if @var options.alert.success is true and return response, otherwise handle
  * error if @var options.alert.failure is not false and throw error.
- * @param {String} url API path
+ * @param {URL} url API path
  * @param {Object} options Can contain the following keys:
  *   @prop {Object} options.alert Sets toast messages.
  *     @prop {Boolean} alert.success Show/Hide success response toast message.
@@ -116,13 +116,15 @@ export async function post(url, body = null, options = {}) {
     })
     .then((response) => {
       if (!options.alert || options.alert.success !== false) {
+        console.log(response);
         errorHandleService.handleStatusCode("post", response.status);
       }
       return response;
     })
     .catch((error) => {
       if (!options.alert || options.alert.failure !== false) {
-        errorHandleService.handleStatusCode("post", error.response.status);
+        console.log('catch')
+        //errorHandleService.handleStatusCode("post", error.response.status);
       }
       throw error;
     });
