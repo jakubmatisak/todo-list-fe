@@ -190,6 +190,7 @@ export default {
     async addTask() {
       const valid = await this.$refs.form.validate()
       if (valid.valid) {
+        console.log(this.newTask)
         this.$emit('addTask', {list_id: this.id, item: this.newTask});
         this.dialog.new = false;
       }
