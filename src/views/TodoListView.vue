@@ -87,8 +87,10 @@ export default {
       let specificList;
       let url = new URL(import.meta.env.VITE_APP_API + urls.todo_lists + urls.backslash + info.list_id + urls.backslash + urls.todo_items);
 
-      if (info.filter && info.filter.length !== 0 && info.filter.value === undefined) {
-        url.searchParams.append('title', info.filter);
+      if(info.filter.name === undefined) {
+        if (info.filter && Object.keys(info.filter).length !== 0) {
+          url.searchParams.append('title', info.filter);
+        }
         specificList = await services.get(url);
       } else {
         if (info.filter && info.filter.value === 'ALL') {
